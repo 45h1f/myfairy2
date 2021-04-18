@@ -1,0 +1,132 @@
+/**
+* [Table of contents]
+  1 1290px css
+  2 1440px css
+  3 1630px css
+  4 1599px css
+  5 1429px css
+  6 1199px css
+  7 991px css
+  8 767px css
+  9 575px css
+  10 480px css
+  11 350px css
+**/
+
+@media (min-width: 1200px) {
+	.container {
+		max-width: 1200px;
+	}
+}
+
+/* 1599px css */
+@media only screen and (max-width: 1599px) {}
+
+/* 1429px css */
+@media only screen and (max-width: 1429px) {}
+
+/* 1199px css */
+@media only screen and (max-width: 1199px) {}
+
+/* 991px css */
+@media only screen and (max-width: 991px) {
+
+	/* menu css */
+	.navbar-toggler {
+		padding: 0;
+		border: none;
+		position: relative;
+		z-index: 2;
+		transition: all 0.5s;
+	}
+
+	.navbar-collapse {
+		background: #fff;
+		box-shadow: 0 0px 0 10px #fff inset, 0 0 0 11px #000 inset;
+		padding: 60px 20px 15px;
+		position: fixed;
+		top: 0;
+		right: 0;
+		display: block !important;
+		width: 50%;
+		text-align: center;
+		bottom: 0;
+		-webkit-transition: all 0.3s ease 0s;
+		-moz-transition: all 0.3s ease 0s;
+		-ms-transition: all 0.3s ease 0s;
+		-o-transition: all 0.3s ease 0s;
+		transition: all 0.3s ease 0s;
+		-webkit-transform: translateX(110%);
+		-moz-transform: translateX(110%);
+		-ms-transform: translateX(110%);
+		-o-transform: translateX(110%);
+		transform: translateX(110%);
+		height: auto !important;
+		overflow: auto;
+	}
+
+	.show-menu #navbarNav {
+		-webkit-transform: translateX(0%);
+		-moz-transform: translateX(0%);
+		-ms-transform: translateX(0%);
+		-o-transform: translateX(0%);
+		transform: translateX(0%);
+	}
+
+	.navbar .dropdown-menu {
+		text-align: center;
+		border: none;
+		padding: 0;
+	}
+
+	.navbar .dropdown-item {
+		padding: 0;
+	}
+
+	.menu-icon {
+		display: inline-block;
+		cursor: pointer;
+	}
+
+	.bar1,
+	.bar2,
+	.bar3 {
+		width: 26px;
+		height: 3px;
+		background-color: #333;
+		margin: 0;
+		transition: 0.4s;
+	}
+
+	.bar2 {
+		margin: 6px 0;
+	}
+
+	.show-menu .bar1 {
+		-webkit-transform: rotate(-45deg) translate(-9px, 6px);
+		transform: rotate(-45deg) translate(-9px, 6px);
+	}
+
+	.show-menu .bar2 {
+		opacity: 0;
+	}
+
+	.show-menu .bar3 {
+		-webkit-transform: rotate(45deg) translate(-8px, -8px);
+		transform: rotate(45deg) translate(-7px, -4px);
+	}
+
+	/* menu css */
+}
+
+/* 767px css */
+@media only screen and (max-width: 767px) {}
+
+/* 575px css */
+@media only screen and (max-width: 575px) {}
+
+/* 480px css */
+@media only screen and (max-width: 480px) {}
+
+/* 350px css */
+@media only screen and (max-width: 350px) {}

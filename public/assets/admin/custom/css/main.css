@@ -1,0 +1,1031 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+
+.c-pointer {
+    cursor: pointer;
+}
+
+
+.clear {
+    clear: both;
+}
+
+.sidebar-container {
+    position: fixed;
+    width: 200px;
+    height: 100%;
+    left: 0;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    background: #593e98;
+    color: #fff;
+    z-index: 1;
+    padding-right: 50px;
+}
+
+.content-container {
+    padding-top: 20px;
+}
+
+.sidebar-logo {
+    padding: 10px 15px;
+    font-size: 20px;
+    background-color: #593e98;
+    position: relative;
+
+    margin-bottom: 40px;
+    margin-top: 30px;
+}
+
+.collapse {
+    background-color: #d2d2d2;
+    width: 200px;
+    left: -90px;
+    top: 20px;
+    background-color: #9478d5;
+    border-radius: 10px;
+    z-index: 9999;
+    display: none;
+}
+
+.collapse li {
+    margin: 0px 10px;
+    border-bottom: 1px solid rgba(179, 172, 255, 0.2);
+}
+
+.collapse li a {
+    text-decoration: none;
+    color: white;
+}
+
+.sidebar-navigation {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    position: relative;
+    text-align: center;
+}
+
+.sidebar-navigation li {
+    background-color: transparent;
+    position: relative;
+    width: 100%;
+    height: 86px;
+}
+
+.sidebar-navigation li span {
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+    color: #8f89cc;
+}
+
+.sidebar-navigation li a {
+    padding: 26px 15px;
+    display: block;
+    color: #fff;
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    outline: none;
+}
+
+.sidebar-navigation li a .link {
+    font-size: 1.2rem;
+}
+
+.sidebar-navigation li.active:before {
+    background-color: #2c106d;
+    position: absolute;
+    opacity: 30%;
+    content: '';
+    height: 100%;
+    left: 0;
+    top: 0;
+    width: 150px;
+    z-index: -1;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+
+.sidebar-navigation .header {
+    font-size: 12px;
+    text-transform: uppercase;
+    background-color: #151515;
+    padding: 10px 15px 10px 30px;
+}
+
+.sidebar-navigation .header::before {
+    background-color: transparent;
+}
+
+.content-container {
+    position: absolute;
+    left: 160px;
+    z-index: 999;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    background-color: #fff;
+    padding: 0;
+    right: 0;
+}
+
+.jumbotron {
+    padding: 30px 64px;
+}
+
+.form-control {
+    width: 617px;
+    height: 50px;
+    background-color: #f7f8ff;
+    border-radius: 13px;
+    border: none;
+}
+
+.user div {
+    float: left;
+    margin: 0 7px;
+}
+
+.user div a {
+    text-decoration: none;
+}
+
+.user a i.far {
+    color: #b1bede;
+    font-size: 1.5rem;
+}
+
+.user img {
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
+}
+
+.user p {
+    margin: 0;
+    color: #9ba6c0;
+}
+
+.data {
+    padding-left: 5rem;
+}
+
+.statistics {
+    box-shadow: 0px 15px 32px 0px rgba(50, 50, 71, 0.08);
+    border-radius: 13px;
+    padding: 20px 10px;
+}
+.col-md-2 {
+    width: 240px !important;
+}
+
+.statistics .stat {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: rgba(192, 195, 220, 1);
+}
+
+.statistics .visit {
+    font-family: 'Poppins', sans-serif;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.custom {
+    background-color: rgba(89, 62, 152, 1);
+}
+
+/* .custom svg {
+    background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.3) 12.38%,
+        rgba(255, 255, 255, 0) 128%
+    );
+} */
+
+.custom .stat {
+    color: rgba(255, 195, 191, 1);
+}
+
+.custom .visit {
+    color: white;
+}
+
+.bookings button {
+    width: 100px;
+    height: 30px;
+    border: 1px solid #dfe3fd;
+    background-color: #fff;
+    border-radius: 6px;
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    color: #593e98;
+    margin: 0 4px;
+}
+
+.booking a {
+    padding: 10px 8px !important;
+    width: 40px;
+    height: 40px;
+    background-color: #ff392b;
+    color: white;
+    border-radius: 13px;
+}
+
+.booking a i {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.calendar {
+    position: absolute;
+    width: 300px;
+    background-color: #fff;
+    box-sizing: border-box;
+    box-shadow: 0 5px 50px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    overflow: hidden;
+    z-index: 333;
+}
+
+.showDate {
+    display: none;
+}
+
+.calendar__picture {
+    position: relative;
+    height: 200px;
+    padding: 20px;
+    color: #fff;
+    background: #262626
+    url('https://images.unsplash.com/photo-1516912481808-3406841bd33c?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ&s=183f2924ba5a8429441804609b2d4f61')
+    no-repeat center/cover;
+    text-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+}
+.calendar__picture::before {
+    content: '';
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.1));
+}
+.calendar__picture h2 {
+    margin: 0;
+}
+.calendar__picture h3 {
+    margin: 0;
+    font-weight: 500;
+}
+
+.calendar__date {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25px, 1fr));
+    grid-gap: 10px;
+    box-sizing: border-box;
+}
+
+.calendar__day {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 25px;
+    font-weight: 600;
+    color: #262626;
+}
+.calendar__day:nth-child(7) {
+    color: #ff685d;
+}
+
+.calendar__number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 25px;
+    color: #262626;
+}
+.calendar__number:nth-child(7n) {
+    color: #ff685d;
+    font-weight: 700;
+}
+.calendar__number--current,
+.calendar__number:hover {
+    background-color: #009688;
+    color: #fff !important;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.btn {
+    width: 90px;
+    border-radius: 22px;
+    background-color: #e3f8ef;
+    color: #0dbf69;
+    font-size: 12px;
+}
+
+.cancel {
+    background-color: #fff0f0;
+    color: #ff392b;
+}
+
+@media (min-width: 768px) {
+    .col-md-3 {
+        flex: 0 0 28%;
+        max-width: 28%;
+    }
+}
+
+.card {
+    padding: 25px 15px 10px;
+    margin-top: 80px;
+    margin-bottom: 20px;
+    background-color: #f7f8ff;
+    height: 605px;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 13px;
+    border: none;
+}
+
+.card .view {
+    margin: 0px auto;
+    font-size: 12px;
+    font-weight: 500;
+    color: #403669;
+}
+
+.card .title h2 {
+    font-size: 24px;
+    color: #2b2b4c;
+    font-weight: 600;
+}
+
+.card .title a {
+    color: #31193b;
+}
+
+.card .title .collapse {
+    top: 44px;
+    left: -44px;
+}
+
+#navbar-list2 {
+    top: 29px;
+    left: -76px;
+}
+
+.card .card-title {
+    margin: 0;
+    font-size: 18px;
+    color: #2b2b4c;
+    font-weight: 600;
+}
+
+.card .card-body {
+    padding: 0;
+    height: auto;
+}
+
+.card-body hr {
+    width: 95%;
+    margin: 5px auto 0px;
+    border-top-color: rgba(179, 172, 255, 0.2);
+}
+
+.card .card-body a {
+    width: 40px;
+    height: 40px;
+    background-color: #593e98;
+    color: white;
+    border-radius: 13px;
+}
+
+.card .card-body a i {
+    width: 100%;
+    height: 100%;
+    line-height: 40px;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.card .card-body p {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #2b2b4c;
+}
+
+.card .card-body span {
+    color: #c0c3dc;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    font-weight: 300;
+}
+
+.card-body .walet a {
+    background-color: white;
+    margin-right: 8px;
+}
+
+.walet a i {
+    color: #baa2ff;
+    font-size: 1rem;
+}
+
+.card-body .walet .money {
+    color: #39b54a;
+    font-weight: 600;
+}
+
+.card-body .walet .withdrawn {
+    color: #ff392b;
+}
+
+#toggle,
+#close {
+    display: none;
+}
+
+@media screen and (max-width: 500px) {
+    #toggle {
+        display: block;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        font-size: 1.8rem;
+        cursor: pointer;
+    }
+    #close {
+        display: block;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        font-size: 1.6rem;
+        cursor: pointer;
+        margin-bottom: 5px;
+    }
+
+    .sidebar-logo {
+        margin-top: 50px;
+    }
+    .sidebar-container {
+        left: -214px;
+    }
+    .content-container {
+        left: 0;
+    }
+}
+
+.payment {
+    padding-right: 5rem;
+}
+
+.payment h1 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 30px;
+    color: #2b2b4c;
+    margin-right: 18px;
+}
+
+.payment .btn {
+    background: #f4f2ff;
+    border-radius: 78px;
+    color: #593e98;
+    font-weight: bold;
+    font-size: 14px;
+    width: 166px;
+    height: 56px;
+}
+
+.payment .btn i {
+    margin-right: 10px;
+}
+.payment .card {
+    padding: 25px;
+    height: 460px;
+    margin-top: 0;
+}
+
+.payment hr {
+    border-top: 2px solid rgba(223, 220, 238, 0.38);
+    margin-bottom: 12px;
+}
+
+.payment .card h2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    color: #2b2b4c;
+}
+
+.payment .card .btn {
+    width: 108px;
+    height: 44px;
+    background-color: #dbf1ff;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.payment .card .ref {
+    font-family: 'Poppins', sans-serif;
+    color: #593e98;
+    font-weight: 300;
+    font-size: 10px;
+}
+
+.payment .card .money {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    color: #1b2b39;
+}
+
+.payment .tabe {
+    padding: 10px;
+}
+
+.payment .tabe span {
+    margin-right: 57px;
+    color: #7d7d7d;
+    font-weight: 600;
+    font-size: 12px;
+    position: relative;
+    cursor: pointer;
+}
+
+.payment .tabe .activeTab {
+    font-weight: 600;
+    color: #2b2b4c;
+}
+
+.payment .tabe .activeTab:after {
+    position: absolute;
+    content: '';
+
+    height: 6px;
+    left: 0px;
+    bottom: -13px;
+    background: #593e98;
+    border-radius: 13px;
+    width: 100%;
+}
+
+.payment .pay {
+    background-color: white;
+    border: 1px solid #f2f0fd;
+    box-shadow: 0px -16px 16px rgba(141, 141, 223, 0.05),
+    0px 8px 28px rgba(50, 50, 71, 0.06);
+    border-radius: 20px;
+    padding: 20px 25px;
+    width: 94%;
+    margin-left: 4%;
+    margin-bottom: 25px;
+}
+
+.payment .pay img {
+    margin-right: 20px;
+}
+
+.payment .pay .btn {
+    width: 115px;
+    border-radius: 13px;
+    background: #593e98;
+    color: white;
+    font-size: 13px;
+    height: 49px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    padding: 0;
+}
+
+.payment .pay span p,
+.payment .pay span .cust {
+    margin-right: 5px;
+    font-size: 24px;
+    color: #a39fd1;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+}
+
+.payment .pay span .cust {
+    font-size: 12px;
+    font-weight: normal;
+    margin-right: 40px;
+}
+
+.payment .pay .apple {
+    margin-right: 10px;
+}
+
+.payment .pay .ask {
+    font-size: 28px;
+    text-decoration: none;
+    color: #593e98;
+    background-color: #f4f2ff;
+    height: 49px;
+    width: 49px;
+    border-radius: 13px;
+    margin-right: 6px;
+}
+
+.payment .new {
+    padding: 0;
+    cursor: pointer;
+}
+
+.payment .pay .add {
+    height: 90px;
+    color: #8782c5;
+    font-weight: 500;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+.payment .pay .add i {
+    margin-right: 10px;
+}
+
+.balance .price {
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.balance .btn {
+    padding: 0;
+    height: 40px;
+    background: #593e98;
+    color: white;
+    border-radius: 13px;
+}
+
+.balance .arrow {
+    width: 41px;
+    height: 41px;
+    text-decoration: none;
+    background: #dfdcee;
+    color: #593e98;
+    border-radius: 13px;
+    font-size: 22px;
+    margin-left: 15px;
+}
+
+.balance .customize {
+    position: absolute;
+    color: #593e98;
+    font-weight: 600;
+}
+
+.payment-method .add {
+    margin-bottom: 35px;
+}
+
+.payment-method .add div {
+    width: 40px;
+    height: 40px;
+    background: #dfdcee;
+    border-radius: 13px;
+}
+
+.payment-method form {
+    padding: 30px;
+    background: rgba(247, 248, 255, 0.6);
+    border: 1px solid rgba(192, 200, 211, 0.31);
+    width: 67%;
+    border-radius: 16px;
+    margin: 0 auto 80px;
+}
+
+.payment-method form .terms {
+    margin-bottom: 43px;
+}
+
+.payment-method form h3 {
+    font-size: 17px;
+    font-weight: bold;
+    color: #151522;
+}
+
+.payment-method form .agree {
+    font-size: 14px;
+    font-weight: 400;
+    color: #151522;
+}
+
+.payment-method form .agree span {
+    color: #5f6ee1;
+}
+
+.payment-method form label {
+    font-size: 16px;
+    font-weight: bold;
+    columns: #151522;
+    margin-bottom: 15px;
+}
+
+.payment-method form .methods div {
+    width: 60px;
+    height: 60px;
+    background-color: white;
+    border: 1px solid rgba(228, 228, 228, 0.6);
+    border-radius: 4px;
+    margin-right: 30px;
+}
+
+.payment-method form .methods span {
+    width: 26px;
+    height: 26px;
+    background-color: white;
+    box-shadow: 0px 2px 2px rgb(50 50 71 / 6%), 0px 2px 4px rgb(50 50 71 / 6%);
+    background-color: white;
+    border-radius: 50%;
+    padding: 16px;
+    position: absolute;
+    top: -15px;
+    right: -15px;
+}
+
+.payment-method form .methods span img {
+    background-color: #00c48c;
+    border-radius: 50%;
+    padding: 4px;
+}
+
+.payment-method form .form-group,
+.payment-method form .box {
+    width: 48%;
+}
+
+.payment-method form .box div {
+    width: 48%;
+}
+
+.payment-method form .box div select {
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid rgba(228, 228, 228, 0.6);
+    padding: 12px 20px;
+}
+
+.payment-method form .form-control {
+    background-color: white;
+    border: 1px solid rgba(228, 228, 228, 0.6);
+    border-radius: 5px;
+}
+
+.payment-method form .box .cvc {
+    font-size: 11px;
+    font-family: 'Poppins', sans-serif;
+    color: #999999;
+    opacity: 0.7;
+    margin-bottom: 0;
+    margin-top: 40px;
+}
+
+.payment-method form button {
+    width: 100%;
+    background: #593e98;
+    border-radius: 13px;
+    border: 0;
+    color: white;
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    height: 50px;
+}
+
+.payment-method form .toggle {
+    position: relative;
+    display: inline-block;
+    width: 48px;
+    height: 24px;
+    background-color: white;
+    border-radius: 16px;
+    box-shadow: 0px 4px 4px rgba(50, 50, 71, 0.08),
+    0px 4px 8px rgba(50, 50, 71, 0.06);
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.payment-method form .toggle:after {
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: #593e98;
+    top: 0px;
+    left: 24px;
+    transition: all 0.5s;
+}
+
+.payment-method form .checkbox:checked + .toggle::after {
+    left: 0px;
+}
+
+.payment-method form .checkbox:checked + .toggle {
+    background-color: #ccc;
+}
+
+.payment-method form .checkbox {
+    display: none;
+}
+
+.messenger {
+    height: 100vh;
+    overflow: hidden;
+}
+
+.chat-container {
+    max-width: 1260px;
+    /* border-top: 1px solid #e7e9f3; */
+    padding: 0;
+    margin-top: 20px;
+}
+
+.chat-container .form-control {
+    width: 94%;
+    height: 45px;
+    background-color: #f4f6f7;
+    margin-bottom: 43px;
+    /* margin-left: 20px; */
+}
+
+.chat-container .chat-contacts h2 {
+    margin: 45px 0 22px 5px;
+}
+
+
+.chat-container .chat-contacts {
+    border-right: 2px solid #f1f2f2;
+    height: 100vh;
+    overflow-y: scroll;
+}
+
+.chat-container .chat-contacts .chat {
+    width: 100%;
+    margin-bottom: 8px;
+    cursor: pointer;
+    padding: 18px 37px 18px 19px;
+}
+
+.chat-container .chat-contacts .chat h6 {
+    font-size: 15px;
+    font-weight: bold;
+    color: #343434;
+}
+
+.chat-container .chat-contacts .chat .text {
+    font-size: 13px;
+    color: #595959;
+    font-weight: 400;
+    font-family: 'Prompt', sans-serif;
+}
+
+.chat-container .chat-contacts .chat .time {
+    font-size: 15px;
+    color: rgba(60, 60, 67, 0.6);
+}
+
+.chat-container .chat-contacts div.activeChat {
+    background-color: white;
+    box-shadow: 0px -16px 23px rgba(165, 165, 249, 0.08),
+    0px 24px 32px rgba(50, 50, 71, 0.08);
+    border-radius: 16px;
+    width: 101%;
+}
+
+.chat-container .frind {
+    border-bottom: 2px solid #f1f2f2;
+    width: 98.5%;
+    padding: 12px 0;
+}
+
+.chat-container .frind .contact-chat img {
+    width: 44px;
+    height: 44px;
+    margin-left: 20px;
+}
+.chat-container .frind .contact-chat p {
+    margin-bottom: 0;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    margin-left: 10px;
+    color: #343434;
+}
+
+.chat-container .frind .func img {
+    padding-left: 10px;
+}
+.chat-container .chat-content {
+    padding-left: 20px;
+    padding-top: 43px;
+}
+.chat-container .chat-content .messages p {
+    background: #f8f8f8;
+    border-radius: 18px 18px 18px 0px;
+    padding: 11px 13px;
+    font-size: 14px;
+    font-family: 'Prompt', sans-serif;
+    letter-spacing: 0.8px;
+    margin-bottom: 11px;
+    margin-left: 15px;
+    line-height: 26px;
+}
+
+.chat-container .chat-content .messages p:first-child {
+    width: 30%;
+}
+
+.chat-container .chat-content .messages p:nth-child(2) {
+    width: 80%;
+}
+
+.chat-container .chat-content img {
+    width: 42px;
+    height: 42px;
+    margin-bottom: 11px;
+}
+
+.chat-container .chat-content span {
+    position: absolute;
+    left: 77px;
+    font-size: 12px;
+    letter-spacing: -0.24px;
+    color: #adadad;
+}
+
+.chat-container .friend-message {
+    margin-top: 70px;
+    padding-right: 70px;
+}
+
+.chat-container .friend-message .messages p {
+    background: #593e98;
+    border-radius: 18px 18px 0px 18px;
+    color: white;
+    font-size: 14px;
+    font-family: 'Prompt', sans-serif;
+    letter-spacing: 0.8px;
+    margin-bottom: 11px;
+    padding: 11px 13px;
+    margin-left: auto;
+    line-height: 26px;
+}
+
+.chat-container .friend-message .messages p:first-child {
+    width: 80%;
+}
+
+.chat-container .friend-message .messages p:nth-child(2) {
+    width: 28%;
+}
+
+.chat-container .friend-message span {
+    letter-spacing: -0.24px;
+    color: #adadad;
+    font-size: 12px;
+}
+
+.myChat .form-control {
+    background: #ffffff;
+    box-shadow: 0px -24px 32px rgba(131, 131, 255, 0.04);
+    padding-left: 50px;
+    height: 60px;
+    border: 1px solid #ccc;
+}
+
+.myChat .fa-camera {
+    position: absolute;
+    left: 20px;
+    bottom: 18px;
+    color: #e5eaec;
+    font-size: 1.2rem;
+}
+
+.myChat .fa-telegram-plane {
+    position: absolute;
+    right: 70px;
+    bottom: 10px;
+    font-size: 2rem;
+    color: #593e98;
+}
+
