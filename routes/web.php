@@ -33,6 +33,7 @@ Route::get('/how-it-work', 'Front\HomeController@howItWork');
 
 Route::get('/donate', 'Front\HomeController@donate');
 Route::post('/donateSubmit', 'DonationController@donateSubmit')->name('donateSubmit');
+Route::post('stripe', 'DonationController@stripePost')->name('stripe.post');
 Route::get('paypal/success', 'DonationController@paypalSuccess')->name('paypalSuccess');
 Route::get('paypal/failed', 'DonationController@paypalFailed')->name('paypalFailed');
 
@@ -75,6 +76,13 @@ Route::group(
         Route::view('/connects', 'jobs.connects')->name('jobs.connects');
     });
 
+
+Route::prefix('admin-panel')->name('admin.')->group(function () {
+
+    Route::resource('services', 'ServiceController');
+});
+
+
 Route::group(['prefix' => 'admin-panel'], function () {
 
     Route::view('/', 'admin.index')->name('admin.index');
@@ -82,10 +90,11 @@ Route::group(['prefix' => 'admin-panel'], function () {
     Route::view('/account', 'admin.account')->name('admin.account');
     Route::view('/connects', 'admin.connects')->name('admin.connects');
     Route::view('/products', 'admin.products')->name('admin.products');
-    Route::view('/services', 'admin.services')->name('admin.services');
+
+
     Route::view('/reports', 'admin.reports')->name('admin.reports');
     Route::view('/bookings', 'admin.bookings')->name('admin.bookings');
-    Route::view('/add-services', 'admin.pages.add-service')->name('admin.add.service');
+
     Route::view('/edit-profile', 'admin.pages.edit-profile')->name('admin.edit.profile');
     Route::view('/bookings/add-payment', 'admin.pages.add-payment')->name('admin.payment.add');
     Route::view('/bookings/show-event', 'admin.pages.show_event')->name('admin.event.show');

@@ -46,7 +46,7 @@
             </a>
         </li>
         <li class="item @if(request()->is('admin-panel/services*')) active @endif">
-            <a href="{{route('admin.services')}}">
+            <a href="{{route('admin.services.index')}}">
                 <img src="{{asset('public/assets/icons/services.svg')}}" alt=""><br>
                 <span>Services</span>
             </a>

@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use Brian2694\Toastr\Facades\Toastr;
 use Illuminate\Http\Request;
 use Omnipay\Omnipay;
+use Stripe\Stripe;
 
 class DonationController extends Controller
 {
@@ -19,7 +21,7 @@ class DonationController extends Controller
 
     public function donateSubmit(Request $request)
     {
- 
+
 
         if ($request->payment == "PayPal") {
 
@@ -43,6 +45,19 @@ class DonationController extends Controller
                 return \redirect()->back();
             }
 
+        }elseif ($request->payment=="Visa"){
+
+
+            Stripe::setApiKey(env('STRIPE_SECRET'));
+            Stripe::create ([
+                "amount" => 100 * 100,
+                "currency" => "usd",
+                "source" => $request->stripeToken,
+                "description" => "donation"
+            ]);
+
+
+            return back();
         }
 
 
@@ -126,4 +141,7 @@ class DonationController extends Controller
     {
        dd('failed');
     }
+
+
+
 }

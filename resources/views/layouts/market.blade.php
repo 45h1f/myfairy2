@@ -29,6 +29,7 @@
 
 	<!-- responsive css  -->
 	<link rel="stylesheet" type="text/css" href="{{URL::to('storage/app/public/Frontassets/css/responsive.css')}}">
+    <link rel="stylesheet" href="http://cdn.bootcss.com/toastr.js/latest/css/toastr.min.css">
     @yield('front_css')
 </head>
 
@@ -77,10 +78,12 @@
 
 	<!-- lazyload js -->
 	<script src="{{URL::to('storage/app/public/Frontassets/js/lazyload.js')}}"></script>
+    <script src="http://cdn.bootcss.com/toastr.js/latest/js/toastr.min.js"></script>
 
 	<!-- custom js -->
 	<script src="{{URL::to('storage/app/public/Frontassets/js/custom.js')}}"></script>
     @yield('front_js')
+    {!! Toastr::message() !!}
 </body>
 
 </html>

@@ -32,6 +32,7 @@ class CreateUsersTable extends Migration
         $user->email = "admin@gmail.com";
         $user->password = \Illuminate\Support\Facades\Hash::make('123456');
         $user->type = 1;
+        $user->save();
     }
 
     /**
